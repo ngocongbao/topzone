@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+</head>
+<style>
+   *{
+       margin: 0;
+       padding: 0;
+       font-family: tahoma;
+   }
+   
+   header{
+       width: 100%;
+       line-height: 60px;
+       height: 75px;
+       background-color: black;
+   }
+   .logo{
+       float: left;
+       width: 20%;
+   }
+   .logo img{
+       height: 70px;
+       width: 70%;
+       border-right: 1px solid white;
+   }
+   ul{
+       float: right;
+       width: 80%;
+       
+   }
+   ul li{
+       display: inline;
+       padding: 0 20px;
+       color: white;
+   }
+   ul li:hover{
+       background-color: gray;
+   }
+   .banner{
+       margin-bottom: 30px;
+   }
+   .footer_banner{
+       display: flex;
+      justify-content: space-between;
+      margin: 0 40px;
+   }
+   .footer_banner img{
+       width: 32%;
+       border-radius: 20px; 
+   }
+   .product{
+       flex: 1;
+   }
+   .row{
+       display: flex;
+       width: 100%;
+       margin-bottom: 20px;
+       margin-right: 10px;
+       margin-left: 10px;
+       margin-top: 70px;
+   }
+   .product1{
+      width: 23%;
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       border: 1px solid white;
+       border-radius: 10px;
+       justify-content: space-between; 
+       margin: 10px;
+      background-color: gainsboro;
+      display: block;
+   }
+   .product1:hover img{
+    transform: scale(1.1);
+   }
+   .product1 img{
+       width: 90%;
+       padding: auto;
+       object-fit: cover;
+       transition: all .5s;
+   }
+   h1{
+       text-align: center;
+   }
+   button{
+       border: 1px solid green;
+       width: 60px;
+       height: 35px;
+       border-radius: 10px;
+       text-align: center;
+       margin: 5px;
+       color: green;
+   }
+   button:hover{
+       background-color: green;
+       color: white;
+   }
+   h4{
+       color: blue;
+   }
+   .button1{
+       border: 1px solid blue;
+       border-radius: 10px;
+       width: 180px;
+       height: 40px;
+       line-height: 40px;
+       margin: auto;
+       color: blue  ;
+       text-align: center;
+   }
+   .button1:hover{
+       background-color: blue;
+       color: white;
+   }
+   h5{
+       text-align: left;
+   }
+   h4{
+       text-align: left;
+   }
+   p{
+       text-align: left;
+   }
+   .button2{
+       width: 100px;
+       height: 30px;
+       border: 1px solid red;
+       color: red;
+       margin: 10px 10px 10px ;
+       border-radius: 10px;
+   }
+   .button2:hover{
+       background-color: red;
+       color: white;
+   }
+   .button3{
+       width: 100px;
+       height: 30px;
+       border: 1px solid orange;
+       color:orange;
+       margin: 10px 10px 10px ;
+       border-radius: 10px;
+   }
+   .button3:hover{
+       background-color:orange;
+       color: white;
+   }
+   .banner1{
+       margin-top: 20px;
+       margin-left: 60px;
+   }
+   .banner1 img{
+       border-radius: 10px;
+   }
+   .news{
+       flex: 1;
+   }
+   .row1{
+       display: flex;
+       width: 100%;
+   }
+   .news1{
+      width: 33%;
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       border: 1px solid wheat;
+       border-radius: 20px;
+       justify-content: space-between; 
+       margin: 10px;
+   }
+   .news1 img{
+       width: 100%;
+       object-fit: cover;
+       height: 200px;
+   }
+   .footer{
+       width: 100%;
+       display: flex;
+       background-color:gray;
+       justify-content: space-between;
+       text-align: center;
+   }
+   h3{
+       font-size: 20px;
+   }
+   .footer1{
+       width: 20%;
+       padding: 30px;
+   }
+   
+   .footer1 p:hover{
+       color: white;
+       transition-delay:.2s;
+   }
+   .footer1 img{
+       width: 50%;
+       border: 1px solid yellowgreen;
+   }
+   h2{
+       color: white;
+   }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo.jpg" alt="">
+        </div>
+        <ul>
+            <li>iPhone</li>
+            <li>iPad</li>
+            <li>Mac</li>
+            <li>Watch</li>
+            <li>Âm thanh</li>
+            <li>Phụ kiện</li>
+            <li>Dịch vụ</li>
+            <li>Khuyến mãi</li>
+            <li>Trả góp</li>
+        </ul>
+    </header>
+    <div class="banner">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/banner.jpeg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/banner.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/banner1.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="footer_banner">
+        <img src="./img/footer_banner1.webp" alt="">
+        <img src="./img/footer_banner2webp.webp" alt="">
+        <img src="./img/footer_banner3.webp" alt="">
+    </div>
+    <div class="product">
+        <div class="row">
+            <h1>iPhone</h1>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product1.webp" alt="">
+                <h5>iPhone 14Pro Max 128GB</h5>
+                <h4>Giá từ:31.990.000đ</h4>
+                <p>Đặt cọc từ 0h ngày 07.10</p>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product2.webp" alt="">
+                <h5>iPhone 14 Pro 128GB</h5>
+                <h4>Giá từ:28.990.000đ</h4>
+                <p>Đặt cọc từ 0h ngày 07.10</p>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product3.webp" alt="">
+                <h5>iPhone 14 Plus 128GB</h5>
+                <h4>Giá từ:25.990.000đ</h4>
+                <p>Đặt cọc từ 0h ngày 07.10</p>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product4.webp" alt="">
+                <h5>iPhone 14 128GB</h5>
+                <h4>Giá từ:22.990.000đ</h4>
+                <p>Đặt cọc từ 0h ngày 07.10</p>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả iPhone ></div>
+        <div class="row">
+            <h1>iPad</h1>
+            <div class="product1">
+                <div class="button2">Hot Sale</div>
+                <img src="./img/product5.webp" alt="">
+                <h5>iPad Pro 12.9 inch(M1,2021)</h5>
+                <h4>Giá từ:23.990.000đ</h4>
+            </div>
+            <div class="product1">
+              <div class="button3">Bán chạy</div>
+                <img src="./img/product6.webp" alt="">
+                <h5>iPad Air 4 10.9 inch WiFi+Cellular 64GB</h5>
+                <h4>Giá từ:31.990.000đ</h4>
+            </div>
+            <div class="product1">
+                <div class="button3">Bán chạy</div>
+                <img src="./img/product7.webp" alt="">
+                <h5>iPad Pro 11 inch(M1,2021)</h5>
+                <h4>Giá từ:19.290.000đ</h4>
+            </div>
+            <div class="product1">
+                <div class="button3">Bán chạy</div>
+                <img src="./img/product8.webp" alt="">
+                <h5>iPad Mini 6 WiFi 64GB</h5>
+                <h4>Giá từ:31.990.000đ</h4>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả iPad ></div>
+        <div class="row">
+            <h1>Mac</h1>
+            <div class="product1">
+                <div class="button3">Bán chạy</div>
+                <img src="./img/product9.webp" alt="">
+                <h5>MacBook Pro 14 M1 Pro (16-Core/16GB/1TB)</h5>
+                <h4>Giá từ:57.990.000đ</h4>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product10.webp" alt="">
+                <h5>MacBook Air M1 2020</h5>
+                <h4>Giá từ:22.450.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product11.webp" alt="">
+                <h5>iMac M1 2021 24 inch (8-Core GPU /8GB/512GB)</h5>
+                <h4>Giá từ:38.450.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product12.webp" alt="">
+                <h5>MacBook Pro 13 M2 2022 (8GB RAM/512 SSD)</h5>
+                <h4>Giá từ:35.990.000đ</h4>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả MacBook ></div>
+        <div class="row">
+            <h1>AirPods</h1>
+            <div class="product1">
+                <div class="button3">Bán chạy</div>
+                <img src="./img/product13.webp" alt="">
+                <h5>AirPods 2</h5>
+                <h4>Giá từ:2.690.000đ</h4>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product14.webp" alt="">
+                <h5>AirPods 3 (2020)</h5>
+                <h4>Giá từ:4.390.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product15.webp" alt="">
+                <h5>AirPods (gen 3)</h5>
+                <h4>Giá từ:4.450.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product16.webp" alt="">
+                <h5>AirPods Max</h5>
+                <h4>Giá từ:9.890.000đ</h4>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả ></div>
+        <div class="row">
+            <h1>Watch</h1>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product17.webp" alt="">
+                <h5>Apple Watch Series 8 nhoom GPS 41mm</h5>
+                <h4>Giá từ:11.990.000đ</h4>
+                <p>Hàng sắp về</p>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product18.webp" alt="">
+                <h5>Apple Watch Ultra</h5>
+                <h4>Giá từ:23.990.000đ</h4>
+                <p>Hàng sắp về</p>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product19.webp" alt="">
+                <h5>Apple Watch SE 2022 nhôm GPS 40mm</h5>
+                <h4>Giá từ:7.490.000đ</h4>
+                <p>Hàng sắp về</p>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product20.webp" alt="">
+                <h5>Apple Watch Series 8 thép GPS +Celluar 45mm</h5>
+                <h4>Giá từ:21.990.000đ</h4>
+                <p>Hàng sắp về</p>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả Watch ></div>
+        <div class="row">
+            <h1>Phụ kiện chính hãng</h1>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product21.webp" alt="">
+                <h5>Ví da iPhone Leather Wallet with MagSafe(2021)</h5>
+                <h4>Giá từ:1.480.000đ</h4>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product22.webp" alt="">
+                <h5>Sạc MagSafe charger/h5>
+                <h4>Giá từ:1.290.000đ</h4>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product23.webp" alt="">
+                <h5>Ốp lưng iPhone 12</h5>
+                <h4>Giá từ:1.430.000đ</h4>
+            </div>
+            <div class="product1">
+                <button>Mới</button>
+                <img src="./img/product24.webp" alt="">
+                <h5>iPhone 14 Sillicone Case witch MaSafe </h5>
+                <h4>Giá từ:15.990.000đ</h4>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả phụ kiện></div>
+        <div class="row">
+            <h1>Dịch vụ </h1>
+            <div class="product1">
+                <img src="./img/product25.webp" alt="">
+                <h5>Apple Care  </h5>
+                <h4>Giá từ:690.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product26.webp" alt="">
+                <h5>Bảo hành kiêm cương </h5>
+                <h4>Giá từ: 190.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product27.webp" alt="">
+                <h5>Microsoft Office </h5>
+                <h4>Giá từ:990.000đ</h4>
+            </div>
+            <div class="product1">
+                <img src="./img/product28.webp" alt="">
+                <h5>Apple School Manager </h5>
+                <h4>Dành cho trương học</h4>
+            </div>
+        </div>
+        <div class="button1">Xem tất cả các dịch vụ></div>
+    </div>
+    <div class="banner1">
+        <img src="./img/banner1.webp" alt="">
+    </div>
+   
+    <div class="news">
+        <h1>Tin mới nhất</h1>
+        <div class="row1">
+            <div class="news1">
+                <img src="./img/product29.webp" alt="">
+                <h5>Nên mua MacBook Air M2 8GB hay 16GB?Phiên bản nào phù hợp nhất</h5>
+                <p>Ngày 14/10/2022</p>
+            </div>
+            <div class="news1">
+                <img src="./img/product30.webp" alt="">
+                <h5>So  sánh MacBook Air M2 và Pro M2 -Đâu là sản phẩm đáng tiền</h5>
+                <p>Ngày 14/10/2022</p>
+            </div>
+            <div class="news1">
+                <img src="./img/product31.webp" alt="">
+                <h5>Những nhược điểm MacBook Air M2 người mua cần cân nhắc</h5>
+                <p>Ngày 14/10/2022</p>
+            </div>
+        </div>
+    </div>
+    <div class="button1">Xem tất cả tin mới nhất></div>
+    <div class="footer">
+        <div class="footer1">
+            <img src="./img/logo.jpg" alt="">
+            <h3>Năm 2020, ShopDunk trở thành đại lý uỷ quyền của Apple .Chúng tôi phát triển chuổi cửa hàng tiêu chuẩn của Apple Momo Store nhằm mang đến trải nghiệm tốt nhất từ sản phẩm và dịch vụ của Apple cho người dùng Việt Nam </h3>
+        </div>
+        <div class="footer1">
+            <h2>Sản phẩm</h2>
+            <p>iPhone</p>
+            <p>iPad</p>
+            <p>Mac</p>
+            <p>Apple Wacth</p>
+            <p>Âm thanh</p>
+            <p>Phụ kiện</p>
+            <p>Dịch vụ</p>
+        </div>
+        <div class="footer1">
+            <h2>Thông tin</h2>
+            <p>Giới thiệu</p>
+            <p>Khuyến mãi</p>
+            <p>Bảo hành và sửa chửa</p>
+            <p>Tuyển dụng </p>
+            <p>Tin tức</p>
+            <p>Check IMEI</p>
+            <p>Phương thức thanh toán</p>
+            <p>Gửi góp ý,khiếu nại</p>
+            <p>Thuê điểm bán lẻ</p>
+        </div>
+        <div class="footer1">
+            <h2>Chính sách</h2>
+            <p>Trả góp </p>
+            <p>Giao hàng</p>
+            <p>Giao hàng (ZaloPay)</p>
+            <p>Huỷ giao dịch</p>
+            <p>ĐỔi trả</p>
+            <p>Bảo hành</p>
+            <p>Giải quyết khiếu nại</p>
+            <p>Bảo mật thông tin</p>
+        </div>
+        <div class="footer1">
+            <h2>Địa chỉ</h2>
+            <p>Tìm Store trên Google Map</p>
+            <p>Hệ thống cửa hàng</p>
+            <h2>Liên hệ</h2>
+            <p>Mua hàng:1900.6226</p>
+            <p>Khiếu nại:0886.308.686</p>
+            <p>Doanh nghiệp& đối tác: 0822.688.668</p>
+        </div>
+    </div>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
